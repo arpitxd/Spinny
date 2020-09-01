@@ -21,7 +21,7 @@ module.exports = {
                 { loader: 'style-loader' },
                 { loader: 'css-loader' },
             ]
-        },
+        }
         ]
     },
     devServer: {
