@@ -6,13 +6,14 @@ import 'cssPath/explore.css';
 import queryString from 'query-string';
 import {getAnimme} from 'basePath/state/actions/animme/animme-action';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 class Explore extends React.Component {
     constructor(props) {
         super(props);
         let queryStringMap = queryString.parse(top.window.location.search);
         this.state = {
             query: queryStringMap.q || '',
-            currentPage: queryStringMap.page || 1
+            currentPage: 1
         };
     }
     onChange = (e) => {
@@ -83,4 +84,4 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Explore);
+export default withRouter(connect(mapStateToProps,mapDispatchToProps)(Explore));

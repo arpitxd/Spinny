@@ -5,7 +5,7 @@ import Explore from 'basePath/views/component/sections/explore';
 import ErrorBoundary from 'basePath/views/component/common/ErrorBoundary';
 
 const routes = (
-    <Router basename="/">
+    <Router basename="/" >
         <ErrorBoundary>
             <Switch>
                 <Route exact path="/" render={props => <Explore {...props} />}/>
